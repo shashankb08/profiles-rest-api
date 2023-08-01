@@ -12,7 +12,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.UserProfile
-        fields = '__all__'
+        fields = ['name', 'password', 'email']
 
     def create(self, validated_data):
         """ Create and return a new user"""
